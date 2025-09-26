@@ -45,4 +45,8 @@ public class GuessTheMovie {
     public boolean isWon(){
         return movieTitle.equals(new String(guessedTitle));
     }
+
+    public boolean isLost(){
+        return wrongAttempts >= MAX_WRONG_GUESSES;
+    }
 }
