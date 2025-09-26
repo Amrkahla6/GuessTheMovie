@@ -41,4 +41,8 @@ public class GuessTheMovie {
 
         return found;
     }
+
+    public boolean isWon(){
+        return movieTitle.equals(new String(guessedTitle));
+    }
 }
