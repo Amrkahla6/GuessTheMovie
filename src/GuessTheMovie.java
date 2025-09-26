@@ -20,4 +20,25 @@ public class GuessTheMovie {
             }
         }
     }
+
+    public boolean guessLetter(char letter){
+        letter = Character.toLowerCase(letter);
+        boolean found = false;
+
+        for (int i = 0; i < movieTitle.length(); i++) {
+            if (movieTitle.charAt(i) == letter) {
+                guessedTitle[i] = letter;
+                found = true;
+            }
+        }
+
+        if (!found) {
+            if (!wrongGuesses.contains(letter)) {
+                wrongGuesses.add(letter);
+                wrongAttempts++;
+            }
+        }
+
+        return found;
+    }
 }
