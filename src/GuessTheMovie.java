@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class GuessTheMovie {
-    private static final int MAX_WRONG_GUESSES = 10;
+    public static final int MAX_WRONG_GUESSES = 10;
     private String movieTitle;
     private char[] guessedTitle;
     private Set<Character> wrongGuesses = new HashSet<>();
