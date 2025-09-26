@@ -49,4 +49,16 @@ public class GuessTheMovie {
     public boolean isLost(){
         return wrongAttempts >= MAX_WRONG_GUESSES;
     }
+
+    public String getGuessedTitle(){
+        return new String(guessedTitle);
+    }
+
+    public Set<Character> getWrongGuesses() {
+        return wrongGuesses;
+    }
+
+    public int getRemainingChances() {
+        return MAX_WRONG_GUESSES - wrongAttempts;
+    }
 }
